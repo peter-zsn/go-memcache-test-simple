@@ -96,7 +96,9 @@ func main()  {
 		}
 	}
 	
-	//decrby 同incrby  减少制定的量
+	//decrby 同incrby  减少指定的量
+	InValue, err = mc.Decrement("infoo", 10)
+	fmt.Println(InValue)
 	InValue, err = mc.Decrement("infoo", 10)
 	fmt.Println(InValue)
 }
